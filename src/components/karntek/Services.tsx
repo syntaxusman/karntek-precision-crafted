@@ -4,6 +4,7 @@ import { services } from "./data";
 
 export function Services() {
   const [active, setActive] = useState(0);
+  const current = services[active]!;
 
   return (
     <section id="services" className="relative bg-[var(--ink)] text-[var(--paper)]">
@@ -21,8 +22,8 @@ export function Services() {
             <div className="sticky top-32 aspect-3/4 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.img
-                  key={services[active].id}
-                  src={services[active].image}
+                  key={current.id}
+                  src={current.image}
                   alt=""
                   loading="lazy"
                   initial={{ opacity: 0, scale: 1.08 }}
@@ -35,14 +36,14 @@ export function Services() {
               <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-[var(--ink)] to-transparent p-6 pt-24">
                 <AnimatePresence mode="wait">
                   <motion.p
-                    key={services[active].id}
+                    key={current.id}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4 }}
                     className="max-w-sm text-sm leading-relaxed text-[var(--paper)]/80"
                   >
-                    {services[active].copy}
+                    {current.copy}
                   </motion.p>
                 </AnimatePresence>
               </div>

@@ -5,7 +5,7 @@ import { caseStudies } from "./data";
 export function CaseStudies() {
   const [i, setI] = useState(0);
   const [dir, setDir] = useState(1);
-  const item = caseStudies[i];
+  const item = caseStudies[i]!;
 
   const go = (n: number) => {
     setDir(n);
