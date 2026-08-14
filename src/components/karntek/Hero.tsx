@@ -78,7 +78,7 @@ export function Hero() {
                       ease: [0.16, 1, 0.3, 1],
                     }}
                     className={`block ${i === 1 ? "md:pl-[28vw]" : ""} ${i === 2 ? "md:pl-[8vw]" : ""}`}
-                    style={i === 2 ? { color: "var(--ink-soft)" } : undefined}
+                    style={{ color: i === 2 ? "var(--ink-soft)" : "var(--ink)" }}
                   >
                     {word}
                     {i === 2 && (
