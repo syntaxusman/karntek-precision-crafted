@@ -36,10 +36,11 @@ export function Hero() {
     >
       <div className="pointer-events-none absolute inset-0 tech-grid opacity-40" />
 
-      {/* Arched architectural crop */}
+      {/* Architectural composition */}
       <div className="gutter relative">
         <div className="relative mx-auto w-full max-w-[1600px]">
-          <div className="relative mx-auto h-[52svh] w-[86%] overflow-hidden arch-arch md:h-[70svh] md:w-[46%]">
+          {/* Arched crop, right-weighted, extends past the grid */}
+          <div className="relative ml-auto h-[42svh] w-[74%] overflow-hidden arch-arch sm:h-[48svh] md:absolute md:right-[-2%] md:top-0 md:h-[74svh] md:w-[40%]">
             <motion.img
               src={tower}
               alt="Contemporary UK high-rise residential tower"
@@ -56,14 +57,17 @@ export function Hero() {
               style={{ top: lineY }}
               className="absolute inset-x-0 h-px bg-[var(--signal)] opacity-60 mix-blend-screen"
             />
+            <span className="meta absolute bottom-5 left-5 text-[var(--paper)] mix-blend-difference">
+              Ref. 001 / High-Rise Residential
+            </span>
           </div>
 
-          {/* Typographic overlay */}
-          <div className="pointer-events-none absolute inset-0 flex items-end md:items-center">
+          {/* Typography */}
+          <div className="relative z-10 mt-10 md:mt-0 md:pt-[10svh]">
             <motion.h1
               initial="hidden"
               animate="show"
-              className="display w-full text-[clamp(3.2rem,15vw,13rem)] text-[var(--ink)]"
+              className="display text-[clamp(3rem,12vw,10.5rem)] text-[var(--ink)]"
             >
               {["Buildings.", "Safety.", "Certainty."].map((word, i) => (
                 <span key={word} className="block overflow-hidden">
@@ -77,7 +81,7 @@ export function Hero() {
                       duration: 1.1,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className={`block ${i === 1 ? "md:pl-[28vw]" : ""} ${i === 2 ? "md:pl-[8vw]" : ""}`}
+                    className={`block ${i === 1 ? "md:pl-[9vw]" : ""} ${i === 2 ? "md:pl-[18vw]" : ""}`}
                     style={{ color: i === 2 ? "var(--ink-soft)" : "var(--ink)" }}
                   >
                     {word}
@@ -91,6 +95,7 @@ export function Hero() {
           </div>
         </div>
       </div>
+
 
       {/* Lower bar */}
       <div className="gutter relative mt-10 md:absolute md:bottom-10 md:left-0 md:right-0 md:mt-0">
