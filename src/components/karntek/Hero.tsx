@@ -57,7 +57,7 @@ export function Hero() {
               style={{ top: lineY }}
               className="absolute inset-x-0 h-px bg-[var(--signal)] opacity-60 mix-blend-screen"
             />
-            <span className="meta absolute bottom-5 left-5 text-[var(--paper)] mix-blend-difference">
+            <span className="meta absolute bottom-5 left-5 text-[var(--paper)] drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
               Ref. 001 / High-Rise Residential
             </span>
           </div>
@@ -81,7 +81,7 @@ export function Hero() {
                       duration: 1.1,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className={`block ${i === 1 ? "md:pl-[9vw]" : ""} ${i === 2 ? "md:pl-[18vw]" : ""}`}
+                    className={`block ${i === 1 ? "md:pl-[9vw]" : ""} ${i === 2 ? "md:pl-[14vw]" : ""}`}
                     style={{ color: i === 2 ? "var(--ink-soft)" : "var(--ink)" }}
                   >
                     {word}
