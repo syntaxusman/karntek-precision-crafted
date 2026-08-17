@@ -81,7 +81,7 @@ export function Footer() {
         </div>
 
         <div className="mt-20 flex flex-col gap-5 border-t border-[var(--hairline-invert)] pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="meta text-[var(--steel)]">© KARNTEK Ltd</p>
+          <p className="meta text-[var(--steel)]">© Artistry</p>
           <div className="flex gap-8">
             <a href="#top" className="link-underline meta text-[var(--paper)]/70">
               Privacy Policy

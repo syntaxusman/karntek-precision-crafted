@@ -15,7 +15,7 @@ export function CaseStudies() {
   return (
     <section id="cases" className="relative overflow-hidden bg-[var(--paper)] py-24 md:py-32">
       <div className="gutter flex items-end justify-between">
-        <h2 className="display text-[clamp(2rem,5vw,4rem)]">Selected work</h2>
+        <h2 className="display text-[clamp(2rem,5vw,4rem)]">Case Studies</h2>
         <div className="flex items-center gap-6">
           <span className="meta text-[var(--steel)]">
             {item.id} / {String(caseStudies.length).padStart(2, "0")}
